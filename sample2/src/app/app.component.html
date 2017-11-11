@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+<select [(ngModel)]="id">
+  <option value="state street bank">State Street Bank</option>
+  <option value="BNY">BNY</option>
+  <option value="JPMC">JP Morgan</option>
+</select>
+<input type="button" value="Get Team Details" (click)="getTeam()"/>
+<p>Data is : {{data}}</p>
+<form>
+  <label>Team Name</label>
+  <input type="text" [(ngModel)]="newTeam.teamName" id="teamName" name="teamName"/>
+  <label>Team ID</label>
+  <input type="text" [(ngModel)]="newTeam.teamId" id="teamID" name="teamID"/>
+  <label>Group ID</label>
+  <input type="text" [(ngModel)]="newTeam.groupId" id="groupID" name="groupID"/>
+  <label>Sub Teams</label>
+  <input type="text" [(ngModel)]="newTeam.subTeams" id="subTeam" name="subTeam"/>
+  <input type="submit" value="Add Team" (click)="addNewTeam()" />
+</form>
+
